@@ -30,8 +30,7 @@ return <section className="movies">
       </div>
     </article>
   </Link>
-  /*console.log(movie);
-  return <h4>movie</h4>*/
+
 })}</section>
 }
 

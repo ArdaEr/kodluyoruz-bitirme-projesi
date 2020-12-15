@@ -1,9 +1,9 @@
-import React, {useState} from 'react';
+import React from 'react';
 import { useGlobalContext } from '../context/context';
 
 
 const SearchFormGames = () => {
-  const {hero, setHero,isErrorGame} = useGlobalContext();
+  const {hero, setHero,isErrorG} = useGlobalContext();
 
   
   return (
@@ -12,7 +12,7 @@ const SearchFormGames = () => {
     <h2>Search Games</h2>
     <input type="text " className="form-input" value={hero}
     onChange={(e)=> setHero(e.target.value)}/>
-    {isErrorGame.show && <div className='error'>{isErrorGame.msg}</div>}
+    {isErrorG.show && <div className='error'>{isErrorG.msg}</div>}
     </form>
   )
 }

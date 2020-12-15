@@ -1,4 +1,4 @@
-import React, {useState} from 'react'
+import React from 'react'
 import { useGlobalContext } from '../context/context';
 import { Link } from 'react-router-dom';
 
@@ -7,21 +7,20 @@ const url =
 
 const Games = () => {
   
-  const {gamiess,isLoading} = useGlobalContext();
+  const {gamies,isLoadingGame} = useGlobalContext();
  
   
   
  
   
-  if(isLoading){
+  if(isLoadingGame){
     return <div className='loading'></div>
   }
-  /*const data = useGlobalContext()
-  console.log(data);*/
+
 return <section className="movies">
-{gamiess.map((gami)=>{
+{gamies.map((gam)=>{
   const {imdbID: key, Poster:poster, Title:title, Year:year} =
-  gami
+  gam
   return <Link to= {`/games/${key}`} key ={key} className="movie">
     <article>
       <img src={poster === 'N/A'? url : poster} alt={title} />
@@ -31,8 +30,7 @@ return <section className="movies">
       </div>
     </article>
   </Link>
-  /*console.log(movie);
-  return <h4>movie</h4>*/
+ 
 })}</section>
 }
 

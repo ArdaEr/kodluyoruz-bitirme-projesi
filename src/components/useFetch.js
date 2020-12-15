@@ -13,7 +13,7 @@ ${process.env.REACT_APP_MOVIE_API_KEY}`
       try {
     const response = await fetch(url);
     const data = await response.json();
-         /*console.log(data);*/
+         console.log(data);
   if(data.Response === 'True' ){
       //console.log(data);
     setData(data.Search || data);
@@ -31,7 +31,7 @@ ${process.env.REACT_APP_MOVIE_API_KEY}`
         setIsLoading(false);
       }
     };
-  
+  //her zaman araması için burayı yazıyoruz
   useEffect(() => {
     fetchMovies(`${API_ENDPOINT}&s=${urlParams}`) 
   },[urlParams])
