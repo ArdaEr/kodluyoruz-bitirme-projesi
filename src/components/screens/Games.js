@@ -1,14 +1,15 @@
 import React, {useState} from 'react'
 import { useGlobalContext } from '../context/context';
 import { Link } from 'react-router-dom';
-import useFetch from '../useFetch';
+
 const url =
   'https://upload.wikimedia.org/wikipedia/commons/f/fc/No_picture_available.png'
 
 const Games = () => {
-  const {query,games} = useGlobalContext();
+  
+  const {gamiess,isLoading} = useGlobalContext();
  
-  const {isLoading,data:movies } = useFetch(`&s=${query}&type=${games}`);
+  
   
  
   
@@ -18,9 +19,9 @@ const Games = () => {
   /*const data = useGlobalContext()
   console.log(data);*/
 return <section className="movies">
-{movies.map((movie)=>{
+{gamiess.map((gami)=>{
   const {imdbID: key, Poster:poster, Title:title, Year:year} =
-  movie
+  gami
   return <Link to= {`/games/${key}`} key ={key} className="movie">
     <article>
       <img src={poster === 'N/A'? url : poster} alt={title} />
