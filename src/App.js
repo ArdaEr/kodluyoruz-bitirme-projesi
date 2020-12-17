@@ -1,5 +1,5 @@
 import React from 'react';
-import { Switch, Route } from 'react-router-dom';
+import { Switch, Route, useLocation} from 'react-router-dom';
 import Home from './Home';
 import Footer from './components/Footer/Footer';
 import Layout from './components/Layout/Layout';
@@ -31,8 +31,11 @@ function App() {
   <Route path="/series/:key" children={<SingleSerie/>} />
   </Switch>
   <Footer/>
+
   </Layout> 
+ 
   )
 }
+
 
 export default App

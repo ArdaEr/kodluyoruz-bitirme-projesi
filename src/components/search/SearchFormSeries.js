@@ -1,6 +1,6 @@
 import React from 'react';
 import { useGlobalContext } from '../context/context';
-
+import Input from '../Input/Input';
 
 const SearchFormType = () => {
   const {vero, setVero,isErrorSerie} = useGlobalContext();
@@ -9,7 +9,7 @@ const SearchFormType = () => {
   <form className="search-form" onSubmit={(e)=>
   e.preventDefault}>
     <h2>Search Series</h2>
-    <input type="text " className="form-input" value={vero}
+    <Input type="text " className="form-input" value={vero}
     onChange={(e)=> setVero(e.target.value)}/>
     {isErrorSerie.show && <div className='error'>{isErrorSerie.msg}</div>}
     </form>

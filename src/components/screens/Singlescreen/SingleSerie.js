@@ -1,5 +1,6 @@
 import React from 'react';
 import { useParams, Link } from 'react-router-dom';
+import Button from '../../Button/Button';
 import useFetch from '../../useFetch'
 
 const SingleSerie = () => {
@@ -32,8 +33,10 @@ const SingleSerie = () => {
       <h4>{type}</h4>
       
      
-      <Link to='/series' className='btn'>
-        back to series
+      <Link to='/series' >
+        <Button className='btn' text = 'back to series'>
+          
+        </Button>
       </Link>
     </div>
   </section >

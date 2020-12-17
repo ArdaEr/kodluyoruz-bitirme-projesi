@@ -1,6 +1,7 @@
 import React from 'react';
 import { useParams, Link } from 'react-router-dom';
 import useFetch from '../../useFetch';
+import Button from '../../Button/Button';
 
 const SingleMovie = () => {
   const {key} = useParams();
@@ -12,8 +13,10 @@ const SingleMovie = () => {
   if(isError.show){
     return (<div className="page-error">
       <h1>{isError.msg}</h1>
-      <Link to='/' className='btn'>
-        back to movies
+     
+      <Link to='/' >
+        <Button text = "back to movies" className='btn'>
+        </Button>
       </Link>
 
     </div>
@@ -31,10 +34,12 @@ const SingleMovie = () => {
       <h4>{director}</h4>
       <h4>{type}</h4>
       
-     
-      <Link to='/' className='btn'>
-        back to movies
+      
+      <Link to='/' >
+        <Button text = "back to movies" className='btn'>
+        </Button>
       </Link>
+      
     </div>
   </section >
   )

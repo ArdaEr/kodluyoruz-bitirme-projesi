@@ -1,5 +1,6 @@
 import React from 'react';
 import { useParams, Link } from 'react-router-dom';
+import Button from '../../Button/Button';
 import useFetch from '../../useFetch';
 
 const SingleGame = () => {
@@ -33,8 +34,10 @@ const SingleGame = () => {
       <h4>{type}</h4>
       
      
-      <Link to='/games' className='btn'>
-        back to games
+      <Link to='/games' >
+       <Button className='btn' text='back to games'>
+         
+       </Button>
       </Link>
     </div>
   </section >
