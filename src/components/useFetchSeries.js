@@ -13,7 +13,7 @@ ${process.env.REACT_APP_MOVIE_API_KEY}`
       try {
     const response = await fetch(url);
     const dataSerie = await response.json();
-         console.log(dataSerie);
+         
   if(dataSerie.Response === 'True' ){
       //console.log(data);
     setDataSerie(dataSerie.Search || dataSerie);

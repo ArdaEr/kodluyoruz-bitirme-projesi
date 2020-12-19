@@ -6,6 +6,8 @@ import useFetch from '../../useFetch';
 const SingleGame = () => {
   const {key} = useParams();
   const {isLoading,isError,data:movie} = useFetch(`&i=${key}`);
+  const url =
+  'https://upload.wikimedia.org/wikipedia/commons/f/fc/No_picture_available.png';
 
   if(isLoading){
     return <div className="loading"></div>
@@ -24,7 +26,8 @@ const SingleGame = () => {
   const{Poster:poster, Title:title, Plot:plot, Year:year, Genre:genre, Director: director, Type: type} = movie;
   //console.log(key);
   return (<section className="single-movie">
-    <img src={poster} alt={title} />
+   
+    <img src={poster === 'N/A'? url : poster} alt={title} />
     <div className="single-movie-info">
       <h2>{title}</h2>
       <h4>{genre}</h4>

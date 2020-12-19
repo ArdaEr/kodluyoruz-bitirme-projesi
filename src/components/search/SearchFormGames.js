@@ -5,7 +5,7 @@ import Input from '../Input/Input';
 
 const SearchFormGames = () => {
   const {hero, setHero,isErrorG} = useGlobalContext();
-
+  
   
   return (
   <form className="search-form" onSubmit={(e)=>
@@ -14,6 +14,7 @@ const SearchFormGames = () => {
     <Input type="text " className="form-input" value={hero}
     onChange={(e)=> setHero(e.target.value)} onKeyPress={(e) => { e.key === 'Enter' && e.preventDefault() }}/>
     {isErrorG.show && <div className='error'>{isErrorG.msg}</div>}
+    
     </form>
   )
 }

@@ -1,5 +1,5 @@
 import React from 'react';
-import { Switch, Route, useLocation} from 'react-router-dom';
+import { Switch, Route} from 'react-router-dom';
 import Home from './Home';
 import Footer from './components/Footer/Footer';
 import Layout from './components/Layout/Layout';
@@ -13,6 +13,8 @@ import Serie from './Serie';
 
 
 function App() {
+ 
+
   return (
   <Layout>
     <Header />
@@ -20,6 +22,7 @@ function App() {
   <Route path="/" exact>
     <Home />
   </Route>
+
   <Route path="/series" exact>
     <Serie />
   </Route>

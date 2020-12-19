@@ -13,7 +13,7 @@ ${process.env.REACT_APP_MOVIE_API_KEY}`
       try {
     const response = await fetch(url);
     const dataG = await response.json();
-    console.log(dataG);
+    
   if(dataG.Response === 'True' ){
       //console.log(data);
     setDataG(dataG.Search || dataG);
@@ -28,7 +28,7 @@ ${process.env.REACT_APP_MOVIE_API_KEY}`
   }
   setIsLoadingGame(false);
       } catch (error) {
-        console.log(error)
+        
         setIsLoadingGame(false);
       }
     };
