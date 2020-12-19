@@ -12,7 +12,7 @@ const SearchFormGames = () => {
   e.preventDefault}>
     <h2>Search Games</h2>
     <Input type="text " className="form-input" value={hero}
-    onChange={(e)=> setHero(e.target.value)}/>
+    onChange={(e)=> setHero(e.target.value)} onKeyPress={(e) => { e.key === 'Enter' && e.preventDefault() }}/>
     {isErrorG.show && <div className='error'>{isErrorG.msg}</div>}
     </form>
   )

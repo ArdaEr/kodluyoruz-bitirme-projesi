@@ -10,7 +10,7 @@ const SearchFormType = () => {
   e.preventDefault}>
     <h2>Search Series</h2>
     <Input type="text " className="form-input" value={vero}
-    onChange={(e)=> setVero(e.target.value)}/>
+    onChange={(e)=> setVero(e.target.value)} onKeyPress={(e) => { e.key === 'Enter' && e.preventDefault() }}/>
     {isErrorSerie.show && <div className='error'>{isErrorSerie.msg}</div>}
     </form>
   )
