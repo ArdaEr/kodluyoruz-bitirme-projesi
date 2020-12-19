@@ -3,6 +3,10 @@
 
 Bu ödevde aşağıda belirtilen kriterleri karşılayan ve içerik konusunda serbest olduğunuz bir uygulama yapmanız isteniyor.
 
+## Netlify Linki
+
+ [Mydb](https://mydb.netlify.app/)
+ 
 ## İstenilenler
 
 - Min. 5 sayfadan oluşmalıdır.
@@ -22,6 +26,3 @@ Bu ödevde aşağıda belirtilen kriterleri karşılayan ve içerik konusunda se
 
 - Test ve deployment konusu şu an için bekleyebilir. Önümüzdeki iki hafta deployment ve test konusunu işledikten sonra projenize bunları dahil edebilirsiniz.
 
-### Netlify 
-
--[Mydb](https://mydb.netlify.app/)
