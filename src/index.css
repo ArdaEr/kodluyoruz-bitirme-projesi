@@ -6,7 +6,6 @@ Variables
 
 :root {
   /* dark shades of primary color*/
-  
   --clr-primary-1: hsl(205, 86%, 17%);
   --clr-primary-2: hsl(205, 77%, 27%);
   --clr-primary-3: hsl(205, 72%, 37%);
@@ -17,12 +16,12 @@ Variables
   --clr-primary-6: hsl(205, 89%, 70%);
   --clr-primary-7: hsl(205, 90%, 76%);
   --clr-primary-8: hsl(205, 86%, 81%);
-  --clr-primary-9: hsl(205, 27%, 69%);
+  --clr-primary-9: hsl(205, 90%, 88%);
   --clr-primary-10: hsl(203, 14%, 32%);
   /* darkest grey - used for headings */
-  --clr-grey-1: hsl#ffffff;
+  --clr-grey-1: hsl(210, 30%, 96%);
   --clr-grey-2: hsl(211, 39%, 23%);
-  --clr-grey-3: hsl(209, 34%, 30%);
+  --clr-grey-3: hsl(0, 1%, 53%);
   --clr-grey-4: hsl(209, 28%, 39%);
   /* grey used for paragraphs */
   --clr-grey-5: hsl(210, 22%, 49%);
@@ -89,15 +88,13 @@ h2 {
 }
 h3 {
   font-size: 1.25rem;
-  color: #fff;
 }
 h4 {
   font-size: 0.875rem;
-  color: #fff;
 }
 p {
   margin-bottom: 1.25rem;
-  color: rgb(156, 148, 148);
+  color: var(--clr-grey-3);
 }
 @media screen and (min-width: 800px) {
   h1 {
@@ -105,7 +102,6 @@ p {
   }
   h2 {
     font-size: 2.5rem;
-    color: #fff;
   }
   h3 {
     font-size: 1.75rem;
