@@ -1,3 +1,4 @@
+
 # Bitirme Ödevi
 
 Bu ödevde aşağıda belirtilen kriterleri karşılayan ve içerik konusunda serbest olduğunuz bir uygulama yapmanız isteniyor.
@@ -20,3 +21,7 @@ Bu ödevde aşağıda belirtilen kriterleri karşılayan ve içerik konusunda se
 ### Not:
 
 - Test ve deployment konusu şu an için bekleyebilir. Önümüzdeki iki hafta deployment ve test konusunu işledikten sonra projenize bunları dahil edebilirsiniz.
+
+### Netlify 
+
+-[Mydb](https://mydb.netlify.app/)
