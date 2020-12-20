@@ -1,6 +1,7 @@
 import React from 'react'
 import { useGlobalContext } from '../context/context';
 import { Link } from 'react-router-dom';
+import Loader from '../Loader/Loader';
 
 const url =
   'https://upload.wikimedia.org/wikipedia/commons/f/fc/No_picture_available.png'
@@ -14,7 +15,7 @@ const Games = () => {
  
   
   if(isLoadingGame){
-    return <div className='loading'></div>
+    return <Loader />
   }
 
 return <section className="movies">

@@ -10,4 +10,9 @@ describe('Footer', () => {
         const FooterTest = getByText(/Copyright/);
         expect(FooterTest).toHaveStyle('background-color: #5d5d5d');
     })
+    test('renders Footer without crashing',() => {
+        const wrapper = render(<Footer/>)
+
+        expect(wrapper).toBeTruthy();
+    })
 });

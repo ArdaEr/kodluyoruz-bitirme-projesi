@@ -3,6 +3,7 @@ import { useGlobalContext } from '../context/context';
 import Input from '../Input/Input';
 
 
+
 const SearchForm = () => {
   const {query, setQuery,isError} = useGlobalContext();
   
