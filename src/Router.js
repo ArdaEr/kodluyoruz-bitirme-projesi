@@ -1,15 +1,16 @@
 import React from 'react';
-import Movies from './components/screens/Movies';
-
-import Games from './components/screens/Games';
-import Series from './components/screens/Series';
-
+import ForGames from './Game';
+import Home from './Home';
+import Serie from './Serie';
+import SingleSerie from './components/screens/Singlescreen/SingleSerie';
+import SingleMovie from './components/screens/Singlescreen/SingleMovie';
+import SingleGame from './components/screens/Singlescreen/SingleGame';
 
 export const routes = [
   {
     path: '/',
     exact: true,
-    component: () => <Movies />,
+    component: () => <Home />,
     title: 'Movies',
     isLink: true,
   },
@@ -17,15 +18,30 @@ export const routes = [
   {
     path: '/series',
     exact: true,
-    component: () => <Series />,
+    component: () => <Serie />,
     title: 'Series',
     isLink: true,
   },
   {
     path: '/games',
     exact: true,
-    component: () => <Games />,
+    component: () => <ForGames />,
     title: 'Games',
     isLink: true,
+  },
+  {
+    path: '/movies/:key',
+    exact: true,
+    component: () => <SingleMovie />,
+  },
+  {
+    path: '/games/:key',
+    exact: true,
+    component: () => <SingleGame />,
+  },
+  {
+    path: '/series/:key',
+    exact: true,
+    component: () => <SingleSerie />,
   },
 ];

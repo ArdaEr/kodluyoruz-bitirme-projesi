@@ -14,11 +14,11 @@ const AppProvider = ({ children }) => {
   const [vero, setVero] = useState('high-score');
   const [oyun, setOyun] = useState('game');
   const [dizi, setDizi] = useState('series');
-  const {isLoading,isError,data:movies } = useFetch(`&s=${query}`);
-  const {isLoadingSerie,isErrorSerie,dataSerie:seriess } = useFetchSeries(`&s=${vero}&type=${dizi}`);
-  const {isLoadingGame,isErrorG,dataG:gamies } = useFetchG(`&s=${hero}&type=${oyun}`);
+  const {isLoading,error,data:movies } = useFetch(`&s=${query}`);
+  const {isLoadingSerie,errorSerie,dataSerie:seriess } = useFetchSeries(`&s=${vero}&type=${dizi}`);
+  const {isLoadingGame,errorGame,dataG:gamies } = useFetchG(`&s=${hero}&type=${oyun}`);
   return <AppContext.Provider value=
-  {{isLoading,isError,movies,query,setQuery,dizi, setDizi,oyun, setOyun, hero, setHero,vero, setVero,isLoadingSerie,isErrorSerie,seriess,isLoadingGame,isErrorG,gamies}}>
+  {{isLoading,error,movies,query,setQuery,dizi, setDizi,oyun, setOyun, hero, setHero,vero, setVero,isLoadingSerie,errorSerie,seriess,isLoadingGame,errorGame,gamies}}>
     {children}</AppContext.Provider>
 }
 // make sure use

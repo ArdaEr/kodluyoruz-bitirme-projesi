@@ -2,9 +2,9 @@ import { useState, useEffect } from 'react';
 const API_ENDPOINT = `https://www.omdbapi.com/?apikey=
 ${process.env.REACT_APP_MOVIE_API_KEY}`
 
- const useFetchG = (urlParamsss) => {
+ const useFetchGames = (urlParams) => {
     const [isLoadingGame, setIsLoadingGame] = useState(true);
-    const [isErrorG, setErrorG] = useState({show:false, msg:''});
+    const [errorGame, setErrorG] = useState({show:false, msg:''});
     const [dataG, setDataG] = useState(null);
     
     const fetchMoviesG = async (url) => {
@@ -34,9 +34,9 @@ ${process.env.REACT_APP_MOVIE_API_KEY}`
     };
   
   useEffect(() => {
-    fetchMoviesG(`${API_ENDPOINT}&s=${urlParamsss}`) 
-  },[urlParamsss])
-    return {isLoadingGame, isErrorG, dataG }
+    fetchMoviesG(`${API_ENDPOINT}&s=${urlParams}`) 
+  },[urlParams])
+    return {isLoadingGame, errorGame, dataG }
 }
 
-export default useFetchG;
+export default useFetchGames;

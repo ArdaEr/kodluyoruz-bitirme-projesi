@@ -5,15 +5,15 @@ import Input from '../Input/Input';
 
 
 const SearchForm = () => {
-  const {query, setQuery,isError} = useGlobalContext();
+  const {query, setQuery,error} = useGlobalContext();
   
   return (
   <form className="search-form" onSubmit={(e)=>
   e.preventDefault}>
     <h2>Search Movies</h2>
     <Input type="text " className="form-input" value={query}
-    onChange={(e)=> setQuery(e.target.value)} onKeyPress={(e) => { e.key === 'Enter' && e.preventDefault() }}/>
-    {isError.show && <div className='error'>{isError.msg}</div>}
+    onChange={(e)=> setQuery(e.target.value)} />
+    {error.show && <div className='error'>{error.msg}</div>}
     </form>
   )
 }

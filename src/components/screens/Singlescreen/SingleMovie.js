@@ -5,16 +5,16 @@ import Button from '../../Button/Button';
 
 const SingleMovie = () => {
   const {key} = useParams();
-  const {isLoading,isError,data:movie} = useFetch(`&i=${key}`);
+  const {isLoading,error,data:movie} = useFetch(`&i=${key}`);
   const url =
   'https://upload.wikimedia.org/wikipedia/commons/f/fc/No_picture_available.png';
 
   if(isLoading){
     return <div className="loading"></div>
   }
-  if(isError.show){
+  if(error.show){
     return (<div className="page-error">
-      <h1>{isError.msg}</h1>
+      <h1>{error.msg}</h1>
      
       <Link to='/' >
         <Button text = "back to movies" className='btn'>

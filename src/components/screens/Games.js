@@ -3,6 +3,9 @@ import { useGlobalContext } from '../context/context';
 import { Link } from 'react-router-dom';
 import Loader from '../Loader/Loader';
 
+import SearchFormGames from '../search/SearchFormGames';
+
+
 const url =
   'https://upload.wikimedia.org/wikipedia/commons/f/fc/No_picture_available.png'
 
@@ -18,7 +21,11 @@ const Games = () => {
     return <Loader />
   }
 
-return <section className="movies">
+
+return (  
+<section className="movies">
+  
+ 
 {gamies.map((gam)=>{
   const {imdbID: key, Poster:poster, Title:title, Year:year} =
   gam
@@ -32,7 +39,7 @@ return <section className="movies">
     </article>
   </Link>
  
-})}</section>
+})}</section>)
 }
 
 export default Games;

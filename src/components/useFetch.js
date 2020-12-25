@@ -4,7 +4,7 @@ ${process.env.REACT_APP_MOVIE_API_KEY}`
 
  const useFetch = (urlParams) => {
     const [isLoading, setIsLoading] = useState(true);
-    const [isError, setError] = useState({show:false, msg:''});
+    const [error, setError] = useState({show:false, msg:''});
     const [data, setData] = useState(null);
     
     const fetchMovies = async (url) => {
@@ -34,7 +34,7 @@ ${process.env.REACT_APP_MOVIE_API_KEY}`
   useEffect(() => {
     fetchMovies(`${API_ENDPOINT}&s=${urlParams}`) 
   },[urlParams])
-    return {isLoading, isError, data }
+    return {isLoading, error, data }
 }
 
 export default useFetch;
